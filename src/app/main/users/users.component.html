@@ -1,0 +1,38 @@
+<section id="users">
+  <div class="container">
+    <h2 class="title">Our cheerful users</h2>
+    <h5 class="subtitle">Attention! Sorting users by registration date</h5>
+    <div *ngIf="!loading; else loader">
+      <div class="users">
+        <div class="row">
+          <div class="col l4 m4 s12" *ngFor="let user of users">
+            <div class="user">
+              <img class="user__img" src="{{user.photo}}" alt="user">
+              <div class="user__info">
+                  <div class="user__title">{{user.name}}</div>
+                <div class="user__position">{{user.position}}</div>
+                <div class="user__email">{{user.email}}</div>
+                <div class="user__phone">{{user.phone}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #loader>
+      <app-loader></app-loader>
+    </ng-template>
+    <div
+      *ngIf="isNew"
+      class="center wrap-btn"
+    >
+      <a
+        (click)="onChange()"
+        class="user__btn waves-effect waves-light btn"
+      >
+        Show more
+      </a>
+    </div>
+  </div>
+</section>
+<app-registration (addNewUser)="updateUserList()"></app-registration>

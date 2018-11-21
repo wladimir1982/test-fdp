@@ -1,0 +1,163 @@
+/*Global Variables*/
+/*Global Variables*/
+.title {
+  padding-top: 72px;
+  margin-bottom: 20px;
+  text-align: center; }
+
+.subtitle {
+  margin-bottom: 49px;
+  text-align: center;
+  color: #010000;
+  font-family: "Source Sans Pro", sans-serif; }
+
+.form {
+  margin-bottom: 118px; }
+  .form__reg {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3px; }
+  .form__reg > .input-field:not(:last-child) {
+    margin-right: 30px; }
+  .form__choice {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px; }
+  .form .file-field[_ngcontent-c8] .file-path-wrapper[_ngcontent-c8] span[_ngcontent-c8] {
+    padding-left: 0; }
+
+input[type=text]:not(.browser-default) {
+  height: 53px;
+  padding-left: 17px;
+  border: 1px solid #b7b7b7;
+  border-radius: 4px;
+  font-family: "Source Sans Pro", sans-serif; }
+
+input::placeholder {
+  color: #8d8c8c;
+  font-family: "Source Sans Pro", sans-serif; }
+
+input[type=text]:not(.browser-default).validate + label {
+  width: auto; }
+
+.input-field.col label {
+  left: 15px; }
+
+.input-field > label {
+  top: 10%;
+  padding: 0 5px;
+  color: #8d8c8c;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  background-color: #ffffff; }
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border: 1px solid #26a69a;
+  box-shadow: none; }
+
+select {
+  height: 56px;
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid #b7b7b7;
+  appearance: none;
+  background: url(../../../assets/images/icons/caret-down.svg) no-repeat scroll 0 0;
+  background-position: 95.5%;
+  color: #000000;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px; }
+
+.file-field .file-path-wrapper {
+  padding-left: 16px; }
+
+.file-field .file-path-wrapper input {
+  margin-bottom: 0; }
+
+.file-field .file-path-wrapper span {
+  color: #8d8c8c;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 12px;
+  padding-left: 17px; }
+
+input.invalid[type=text]:not(.browser-default) {
+  box-shadow: none; }
+
+.my-btn {
+  position: absolute;
+  right: 0;
+  height: 56px;
+  padding: 0 6.5%;
+  border-radius: 0 4px 4px 0;
+  border: 2px solid #ef6c00;
+  color: #ef6c00;
+  background-color: #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 700;
+  line-height: 53px; }
+
+input.valid[type=text]:not(.browser-default) {
+  box-shadow: none; }
+
+div#default.container {
+  display: none; }
+
+.constraints-info[_ngcontent-c10] {
+  display: none !important; }
+
+.btn-submit {
+  height: 40px;
+  padding: 0 110px;
+  color: #fefefe;
+  background-color: #ef6c00;
+  border-radius: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: none; }
+
+.btn:disabled, .btn[disabled] {
+  color: #8d8c8c !important;
+  background-color: #d7d7d7 !important; }
+
+.modal__title {
+  margin-bottom: 10px; }
+.modal__btn {
+  color: #ef6c00;
+  font-weight: bold; }
+
+@media only screen and (min-width: 993px) {
+  .row .col {
+    padding: 0; }
+
+  input[type=text]:not(.browser-default) {
+    width: 94%; }
+
+  select {
+    width: 97%; } }
+@media only screen and (max-width: 992px) {
+  .form input[type=text]:not(.browser-default) {
+    width: 96%;
+    margin: 0; } }
+@media only screen and (max-width: 600px) {
+  .subtitle {
+    margin-bottom: 20px; }
+
+  .form {
+    margin-bottom: 70px; }
+    .form__reg {
+      display: flex;
+      flex-direction: column; }
+    .form__reg > .input-field:not(:last-child) {
+      margin-right: 0; }
+    .form__choice {
+      display: flex;
+      flex-direction: column; }
+    .form .file-field .file-path-wrapper {
+      padding-left: 0; }
+
+  .my-btn {
+    right: 10px; } }
+
+/*# sourceMappingURL=registration.component.css.map */

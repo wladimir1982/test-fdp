@@ -1,0 +1,8 @@
+{
+  "/api/*" : {
+    "target" : "https://frontend-test-assignment-api.abz.agency",
+    "secure" : false,
+    "logLevel" : "debug",
+    "changeOrigin" : true
+  }
+}

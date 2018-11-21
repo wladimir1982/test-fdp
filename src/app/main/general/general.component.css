@@ -1,0 +1,44 @@
+/*Global Variables*/
+/*Global Variables*/
+.info {
+  padding: 132px 0 134px;
+  background-image: url(../../../assets/images/imgs/bg-2.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover; }
+  .info__title {
+    margin-bottom: 47px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .info__description {
+    padding-right: 8px;
+    color: #fefefe;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    line-height: 22px; }
+  .info__img {
+    display: flex;
+    justify-content: flex-end; }
+
+@media only screen and (min-width: 993px) {
+  .row .col {
+    padding: 0; }
+
+  img {
+    padding-top: 14px; } }
+@media only screen and (max-width: 992px) {
+  img {
+    width: 100%; }
+
+  .info__title {
+    white-space: normal; } }
+@media only screen and (max-width: 600px) {
+  .info {
+    padding: 70px 0 70px; }
+    .info__wrap {
+      display: flex;
+      flex-direction: column-reverse; } }
+
+/*# sourceMappingURL=general.component.css.map */

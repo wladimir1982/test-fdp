@@ -1,0 +1,184 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.title {
+  padding-top: 72px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.subtitle {
+  margin-bottom: 49px;
+  text-align: center;
+  color: $attention-color;
+  font-family: $second-font-family;
+}
+.form {
+  margin-bottom: 118px;
+  &__reg {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3px;
+  }
+  &__reg > .input-field:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__choice {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+  .file-field[_ngcontent-c8] .file-path-wrapper[_ngcontent-c8] span[_ngcontent-c8] {
+    padding-left: 0;
+  }
+}
+input[type=text]:not(.browser-default) {
+  height: 53px;
+  padding-left: 17px;
+  border: 1px solid $input-color;
+  border-radius: 4px;
+  font-family: $second-font-family;
+}
+input::placeholder {
+  color: $nav-email-color;
+  font-family: $second-font-family;
+}
+input[type=text]:not(.browser-default).validate + label {
+  width: auto;
+}
+.input-field.col label {
+  left: 15px;
+}
+.input-field > label {
+  top: 10%;
+  padding: 0 5px;
+  color: $nav-email-color;
+  font-family: $second-font-family;
+  font-size: 14px;
+  background-color: $white-color;
+}
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border: 1px solid $checked-input-color;
+  box-shadow: none;
+}
+select {
+  height: 56px;
+  border-radius: 4px;
+  padding: 16px;
+  border: 1px solid $input-color;
+  appearance: none;
+  background: url(../../../assets/images/icons/caret-down.svg) no-repeat scroll 0 0;
+  background-position: 95.5%;
+  color: $black-color;
+  font-family: $second-font-family;
+  font-size: 16px;
+}
+.file-field .file-path-wrapper {
+  padding-left: 16px;
+}
+.file-field .file-path-wrapper input {
+  margin-bottom: 0;
+}
+.file-field .file-path-wrapper span  {
+  color: $nav-email-color;
+  font-family: $second-font-family;
+  font-size: 12px;
+  padding-left: 17px;
+}
+input.invalid[type=text]:not(.browser-default) {
+  box-shadow: none;
+}
+.my-btn {
+  position: absolute;
+  right: 0;
+  height: 56px;
+  padding: 0 6.5%;
+  border-radius: 0 4px 4px 0;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  background-color: $white-color;
+  font-family: $second-font-family;
+  font-size: 20px;
+  text-transform: none;
+  font-weight: 700;
+  line-height: 53px;
+}
+input.valid[type=text]:not(.browser-default) {
+  box-shadow: none;
+}
+div#default.container {
+  display: none;
+}
+.constraints-info[_ngcontent-c10] {
+  display: none !important;
+}
+.btn-submit {
+  height: 40px;
+  padding: 0 110px;
+  color: $users-want-color;
+  background-color: $primary-color;
+  border-radius: 4px;
+  font-family: $second-font-family;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: none;
+}
+.btn:disabled, .btn[disabled] {
+  color: $nav-email-color !important;
+  background-color: $disabled-color !important;
+}
+.modal {
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__btn {
+    color: $primary-color;
+    font-weight: bold;
+  }
+}
+
+//styles for media queries
+
+@media #{$large-and-up} {
+  .row .col {
+    padding: 0;
+  }
+  input[type=text]:not(.browser-default) {
+    width: 94%;
+  }
+  select {
+    width: 97%;
+  }
+}
+@media #{$medium-and-down} {
+  .form {
+    input[type=text]:not(.browser-default) {
+      width: 96%;
+      margin: 0;
+    }
+  }
+}
+@media #{$small-and-down} {
+  .subtitle {
+    margin-bottom: 20px;
+  }
+  .form {
+    margin-bottom: 70px;
+    &__reg {
+      display: flex;
+      flex-direction: column;
+    }
+    &__reg > .input-field:not(:last-child) {
+      margin-right: 0;
+    }
+    &__choice {
+      display: flex;
+      flex-direction: column;
+    }
+    .file-field .file-path-wrapper {
+      padding-left: 0;
+    }
+  }
+  .my-btn {
+    right: 10px;
+  }
+}

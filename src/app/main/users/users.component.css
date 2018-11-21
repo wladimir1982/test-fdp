@@ -1,0 +1,121 @@
+/*Global Variables*/
+/*Global Variables*/
+.title {
+  padding-top: 133px;
+  margin-bottom: 20px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+.subtitle {
+  margin-bottom: 60px;
+  text-align: center;
+  color: #010000;
+  font-family: "PT Sans", sans-serif; }
+
+.users {
+  margin-bottom: -70px; }
+
+.user {
+  height: 150px;
+  margin-bottom: 68px;
+  display: flex;
+  flex-direction: row; }
+  .user__img {
+    width: 70px;
+    height: 70px;
+    margin-right: 8px;
+    border-radius: 50%; }
+  .user__info {
+    flex: 1 1 0px;
+    min-width: 0;
+    margin-top: 12px; }
+  .user__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 0;
+    color: #000000;
+    font-family: "Overpass - Semi Bold", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.2; }
+  .user__title:hover {
+    white-space: initial; }
+  .user__position {
+    margin-bottom: 2px;
+    color: #4c4b4b;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.2;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .user__position:hover {
+    white-space: initial; }
+  .user__email {
+    margin-bottom: 2px;
+    color: #4c4b4b;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.2;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .user__phone {
+    color: #4c4b4b;
+    font-family: "Source Sans Pro", sans-serif;
+    line-height: 1.2;
+    font-size: 14px; }
+  .user__btn {
+    height: 40px;
+    padding: 0 92px;
+    color: #ef6c00;
+    background-color: #ffffff;
+    border: 2px solid #ef6c00;
+    border-radius: 4px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none; }
+
+.wrap-btn {
+  margin-bottom: 81px; }
+
+@media only screen and (min-width: 993px) {
+  .row .col {
+    padding: 0; } }
+@media only screen and (max-width: 992px) {
+  .users {
+    margin-bottom: -40px; }
+
+  .user {
+    height: 225px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .user__img {
+      margin: 0 auto; }
+    .user__info {
+      margin-top: 0;
+      text-align: center; } }
+@media only screen and (max-width: 600px) {
+  .title {
+    padding-top: 70px; }
+
+  .subtitle {
+    margin-bottom: 30px; }
+
+  .users {
+    margin-bottom: -10px; }
+
+  .user {
+    height: 200px;
+    margin-bottom: 30px; }
+
+  .wrap-btn {
+    margin-bottom: 50px; } }
+
+/*# sourceMappingURL=users.component.css.map */

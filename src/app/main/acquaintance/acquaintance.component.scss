@@ -1,0 +1,72 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.title {
+  padding-top: 132px;
+  margin-bottom: 48px;
+  color: $black-color;
+  text-align: center;
+  @include styles-for-content-overflow;
+}
+.info {
+  padding: 0 0 0 7px;
+  &__subtitle {
+    margin-bottom: 10px;
+    color: $black-color;
+    @include styles-for-content-overflow;
+  }
+  &__description {
+    margin-bottom: 16px;
+    color: $desc-color;
+    font-family: $second-font-family;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  &__btn {
+    color: $primary-color;
+    font-family: $second-font-family;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+//styles for media queries
+
+@media #{$large-and-up} {
+  .img {
+    padding: 0 .1rem;
+    margin-top: -20px;
+  }
+}
+
+@media #{$medium-and-down} {
+  .info {
+    &__subtitle:hover {
+      white-space: normal;
+    }
+    &__wrap-btn {
+      @include styles-for-df;
+    }
+  }
+}
+
+@media #{$small-and-down} {
+  .title {
+    padding-top: 70px;
+  }
+  .img {
+    @include styles-for-df;
+    margin-bottom: 30px;
+  }
+  .info {
+    &__subtitle {
+      text-align: center;
+      white-space: normal;
+    }
+    &__description {
+      text-align: center;
+    }
+  }
+}
+

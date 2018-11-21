@@ -1,0 +1,96 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.wrap {
+  padding: 96px 0 119px;
+}
+.title {
+  margin-bottom: 48px;
+  line-height: 1.25;
+  text-align: center;
+  @include styles-for-content-overflow;
+}
+
+.info {
+  padding: 0;
+  &__img {
+    margin-bottom: 16px;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+    @include styles-for-content-overflow;
+  }
+  &__description {
+    color: $desc-color;
+    font-family: $second-font-family;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+//styles for media queries
+
+@media #{$large-and-up} {
+  .wrap {
+    .row .col {
+      padding: 0;
+    }
+    .css {
+      padding-left: 10px !important;
+    }
+    .js {
+      padding-left: 20px !important;
+    }
+  }
+}
+
+@media #{$medium-only} {
+  .info {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 50px;
+    }
+    &__img {
+      margin-right: 37px;
+      margin-bottom: 0;
+    }
+  }
+  .mb {
+    margin-bottom: 0;
+  }
+}
+
+@media #{$medium-and-down} {
+  .info {
+    padding: 0 5px;
+    &__subtitle:hover {
+      white-space: normal;
+    }
+  }
+
+}
+
+@media #{$small-and-down} {
+  .wrap {
+    padding: 45px 0 45px;
+  }
+  .title {
+    white-space: normal;
+  }
+  .info {
+    @include styles-for-df;
+    &__img {
+      @include styles-for-df;
+    }
+    &__subtitle {
+      text-align: center;
+    }
+    &__description {
+      text-align: center;
+    }
+  }
+  .info:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

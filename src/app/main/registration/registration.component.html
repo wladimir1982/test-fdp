@@ -1,0 +1,179 @@
+<section id="sign">
+  <div class="container">
+    <h2 class="title">Register to get a work</h2>
+    <h5 class="subtitle">Attention! After successful registration and alert, update the list of users in the block from
+      the top</h5>
+    <div class="row">
+      <form
+        class="form"
+        name="form"
+        [formGroup]="form"
+        (ngSubmit)="onSubmit()"
+      >
+        <div class="form__reg">
+          <div class="input-field col l4 m4 s12">
+            <input
+              formControlName="name"
+              placeholder="Your name"
+              id="name"
+              type="text"
+              class="validate"
+              [ngClass]="{'invalid': form.get('name').invalid && form.get('name').touched}"
+            >
+            <label for="name">Name</label>
+            <span
+              class="helper-text red-text"
+              *ngIf="form.get('name').invalid && form.get('name').touched"
+            >
+              <span *ngIf="form.get('name').errors['required']">
+                Username cannot be empty
+              </span>
+              <span *ngIf="form.get('name').errors['pattern']">
+                Username must be between 2 and 60 characters
+              </span>
+            </span>
+          </div>
+          <div class="input-field col l4 m4 s12">
+            <input
+              formControlName="email"
+              placeholder="Your email"
+              id="email"
+              type="text"
+              class="validate"
+              [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}"
+            >
+            <label for="email">Email</label>
+            <span
+              class="helper-text red-text"
+              *ngIf="form.get('email').invalid && form.get('email').touched"
+            >
+              <span *ngIf="form.get('email').errors['required']">
+                Email must not be empty
+              </span>
+              <span *ngIf="form.get('email').errors['email']">
+                Enter a valid email address
+              </span>
+            </span>
+          </div>
+          <div class="input-field col l4 m4 s12">
+            <input
+              formControlName="phone"
+              placeholder="+38 (___) ___ __ __"
+              id="phone"
+              type="text"
+              class="validate"
+              [ngClass]="{'invalid': form.get('phone').invalid && form.get('phone').touched}"
+            >
+            <label for="phone">Phone</label>
+            <span
+              class="helper-text red-text"
+              *ngIf="form.get('phone').invalid && form.get('phone').touched"
+            >
+              <span *ngIf="form.get('phone').errors['required']">
+                Phone number must not be empty
+              </span>
+              <span *ngIf="form.get('phone').errors['pattern']">
+                Enter the number in the format +380YYXXXXXXX
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="form__choice">
+          <div class="input-field col l6 m6 s12">
+            <select
+              formControlName="position_id"
+              class="browser-default"
+              [ngClass]="{'invalid': form.get('phone').invalid && form.get('phone').touched}"
+            >
+              <option value="" disabled selected>Select your position</option>
+              <option *ngFor="let position of positions" [value]="position.id">
+                {{position.name}}
+              </option>
+            </select>
+            <span
+              class="helper-text red-text"
+              *ngIf="form.get('position_id').invalid && form.get('position_id').touched"
+            >
+              <span *ngIf="form.get('position_id').errors['required']">
+                Position selection is required
+              </span>
+           </span>
+          </div>
+          <div class="file-field input-field col l6 m6 s12">
+            <div class="btn my-btn">
+              <span class="hide-on-small-and-down">Upload</span>
+              <img class="hide-on-med-and-up" src="../../../assets/images/icons/upload.svg" alt="upload">
+              <input
+                formControlName="photo"
+                type="file"
+                name="photo"
+                (change)="onFileUpload($event)"
+              >
+            </div>
+            <div class="file-path-wrapper">
+              <input
+                formControlName="input_text"
+                class="file-path validate"
+                type="text"
+                id="photo"
+                placeholder="Upload your photo"
+              >
+              <span
+                class="helper-text red-text"
+                *ngIf="form.get('photo').invalid && form.get('photo').touched"
+              >
+                <span class="helper-text red-text" *ngIf="form.get('photo').touched && form.get('photo').errors['required']">
+                  File to be uploaded is required
+                </span>
+                <span class="helper-text red-text" *ngIf="form.get('photo').errors['extension']">
+                  There should be one photo be in jpeg/jpg format
+                </span>
+                <span class="helper-text red-text" *ngIf="form.get('photo').errors['maxSize']">
+                  There file be no more than 5 megabytes
+                </span>
+                <span class="helper-text red-text" *ngIf="form.get('photo').errors['dimension']">
+                  There file be have a minimum resolution of 70x70 pixels
+                </span>
+              </span>
+              <span>
+                File format jpg  up to 5 MB, the minimum size of 70x70px
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="center">
+          <button
+            class="btn btn-submit waves-effect waves-light"
+            type="submit"
+            name="action"
+            [disabled]="form.invalid || form.disabled"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+                                        <!-- Modal Structure Start-->
+    <div id="modal1" class="modal" #modal>
+      <div class="modal-content" *ngIf="isNew">
+        <h4 class="modal__title">Congratulations</h4>
+        <p>You have successfully passed the registration</p>
+        <!--<p>{{success}}</p>-->
+      </div>
+      <div class="modal-content" *ngIf="!isNew">
+        <h4 class="modal__title red-text">Excuse me! An error has occurred ...</h4>
+        <p>{{error}}</p>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="#!"
+          class=" modal__btn modal-close waves-effect waves-green btn-flat"
+          (click)="closeModal()"
+        >
+        ok
+        </a>
+      </div>
+    </div>
+                                        <!-- Modal Structure Finish-->
+  </div>
+</section>

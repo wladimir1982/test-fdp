@@ -1,1 +1,117 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~materialize-css/sass/materialize.scss";
+@import url('https://fonts.googleapis.com/css?family=Overpass:600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans&subset=cyrillic');
+@import 'app/styles/_mixins.scss';
+@import 'app/styles/_variables.scss';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    font-family: $first-font-family;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .container {
+    width: 960px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+  }
+
+  //@include desktop-breakpoint()
+  @media #{$extra-large-and-up} {
+    .container {
+      width: 1140px;
+    }
+  }
+  @media #{$large-and-up} {
+    h1 {
+      font-size: 50px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+
+    h4 {
+      font-size: 22px;
+    }
+
+    h5 {
+      font-size: 18px;
+    }
+  }
+
+  //@include tablet-breakpoint
+  @media #{$medium-and-down} {
+    .container {
+      width: 100%;
+    }
+    h1 {
+      font-size: 42px;
+    }
+
+    h2 {
+      font-size: 42px;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+
+    h4 {
+      font-size: 22px;
+    }
+
+    h5 {
+      font-size: 18px;
+    }
+  }
+
+  //@include mobile-breakpoint {
+  @media #{$small-and-down} {
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    h4 {
+      font-size: 22px;
+    }
+
+    h5 {
+      font-size: 16px;
+    }
+  }
+
+}

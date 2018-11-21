@@ -1,0 +1,157 @@
+@import '../styles/mixins.scss';
+@import '../styles/variables.scss';
+
+.footer {
+  background-color: $secondary-color;
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
+  &__logo {
+    width: 134px;
+    cursor: pointer;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__menu-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  &__menu-link {
+    color: $white-color;
+    font-family: $second-font-family;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  hr {
+    height: 1px;
+    margin-top: -3px;
+    margin-bottom: 20px;
+    border: none;
+    color: $hr-color;
+    background-color: $hr-color;
+  }
+  &__content {
+    margin-bottom: 22px;
+    @include styles-for-footer-df;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+  }
+  &__contacts:first-child a {
+    color: $white-color;
+  }
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    padding-top: 5px;
+  }
+  &__contacts-item {
+    color: $white-color;
+    font-family: $second-font-family;
+    font-size: 20px;
+  }
+  &__contacts-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &__pages {
+    @include styles-for-footer-df;
+    flex-basis: 57%;
+  }
+  &__pages ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__pages-link {
+    color: $white-color;
+    font-family: $second-font-family;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  &__social {
+    margin-bottom: 30px;
+    @include styles-for-footer-df;
+  }
+  &__social-copy {
+    padding-top: 8px;
+    color: $white-color;
+    font-family: $second-font-family;
+    font-size: 12px;
+  }
+  &__social ul {
+    @include styles-for-footer-df;
+  }
+  &__social-item:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+//styles for media queries
+
+@media #{$large-and-up} {
+  .row .col {
+    padding: 0;
+  }
+}
+
+@media #{$medium-and-down} {
+  .footer {
+    &__contacts-item {
+      font-size: 18px;
+    }
+    &__menu {
+      flex-basis: 70%;
+    }
+    &__menu-item:not(:last-child) {
+      margin-right: 3%;
+    }
+  }
+}
+
+@media #{$small-and-down} {
+  .footer {
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0;
+    }
+    &__logo {
+      margin: 0 auto;
+    }
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    &__menu-item:not(:last-child) {
+      margin-right: 0;
+    }
+    &__content {
+      justify-content: center;
+      text-align: center;
+    }
+    &__contacts-item {
+      margin: 0 auto;
+    }
+    &__pages {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    &__social {
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    &__social ul {
+      justify-content: center;
+    }
+  }
+}
