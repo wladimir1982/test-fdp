@@ -84,9 +84,6 @@
     background-position: 0 65px;
     background-size: 130% 112%;
   }
-  &__info-text {
-    padding: 194px 0 158px;
-  }
   &__info-title {
     color: $white-color;
     line-height: 1.19;
@@ -162,26 +159,39 @@
       padding-top: 3px;
       margin-right: 65px;
     }
+    &__info-text {
+      padding: 194px 0 158px;
+    }
   }
 }
 
 @media #{$extra-large-and-up} {
   .header{
+    &__nav-wrapper {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
     &__logo {
       padding-top: 0;
       margin-right: 0;
+    }
+    &__info-text {
+      padding: 194px 0.75rem 158px;
     }
   }
 }
 
 @media #{$medium-and-down} {
   .header {
-    .wrap {
+    &__nav-wrapper {
       padding-left: 0.75rem;
       padding-right: 0.75rem;
     }
     &__nav-wrapper {
       align-items: center;
+    }
+    &__info-text {
+      padding: 194px 0.75rem 158px;
     }
     &__info-title {
       white-space: normal;
