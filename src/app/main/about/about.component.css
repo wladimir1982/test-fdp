@@ -33,6 +33,16 @@
     padding-left: 10px !important; }
   .wrap .js {
     padding-left: 20px !important; } }
+@media only screen and (min-width: 1201px) {
+  .row .col {
+    padding: 0 0.75rem; }
+
+  .wrap .css {
+    padding: 0 0.75rem !important; }
+  .wrap .js {
+    padding: 0 0.75rem !important; }
+  .wrap .row .col {
+    padding: 0 0.75rem; } }
 @media only screen and (min-width: 601px) and (max-width: 992px) {
   .info__content {
     display: flex;
@@ -46,7 +56,7 @@
     margin-bottom: 0; } }
 @media only screen and (max-width: 992px) {
   .info {
-    padding: 0 5px; }
+    padding: 0 0.75rem; }
     .info__subtitle:hover {
       white-space: normal; } }
 @media only screen and (max-width: 600px) {

@@ -2,26 +2,14 @@
 @import '../styles/variables.scss';
 
 .header {
-    //background-image: url(../../assets/images/imgs/bg-1.jpg);
-    background-image: url(../../assets/images/imgs/bg-1-min.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: 0 65px;
-    background-size: 130% 150%;
-    height: 136vh;
   .wrap {
     width: 100%;
     background-color: $white-color;
-    //position: fixed;
-    z-index: 10;
-  }
-  .fixed {
     position: fixed;
+    z-index: 10;
   }
   &__logo {
     width: 134px;
-    padding-top: 3px;
-    margin-right: 65px;
     cursor: pointer;
   }
   &__nav-wrapper {
@@ -30,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     min-height: 65px;
+    margin-bottom: -10px;
   }
   &__menu {
     padding-bottom: 7px;
@@ -89,8 +78,14 @@
       color: $secondary-color;
     }
   }
+  &__info {
+    background-image: url(../../assets/images/imgs/bg-1-min.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 65px;
+    background-size: 130% 112%;
+  }
   &__info-text {
-    padding: 129px 0 0 0;
+    padding: 194px 0 158px;
   }
   &__info-title {
     color: $white-color;
@@ -120,6 +115,10 @@
 }
 
 //styles for sidenav
+
+.sidenav-overlay {
+  display: none !important;
+}
 
 .user {
   padding-top: 30px;
@@ -157,9 +156,30 @@
 
 //styles for media queries
 
+@media #{$large-and-up} {
+  .header {
+    &__logo {
+      padding-top: 3px;
+      margin-right: 65px;
+    }
+  }
+}
+
+@media #{$extra-large-and-up} {
+  .header{
+    &__logo {
+      padding-top: 0;
+      margin-right: 0;
+    }
+  }
+}
+
 @media #{$medium-and-down} {
   .header {
-    height: 110vh;
+    .wrap {
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+    }
     &__nav-wrapper {
       align-items: center;
     }
@@ -171,7 +191,6 @@
 
 @media #{$small-and-down} {
   .header {
-    height: 100vh;
     &__info-title {
       text-align: center;
     }

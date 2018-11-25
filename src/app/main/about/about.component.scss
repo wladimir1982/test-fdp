@@ -44,6 +44,23 @@
   }
 }
 
+@media #{$extra-large-and-up} {
+  .row .col {
+    padding: 0 0.75rem;
+  }
+  .wrap {
+    .css {
+      padding: 0 0.75rem !important;
+    }
+    .js {
+      padding: 0 0.75rem !important;
+    }
+    .row .col {
+      padding: 0 0.75rem;
+    }
+  }
+}
+
 @media #{$medium-only} {
   .info {
     &__content {
@@ -63,7 +80,7 @@
 
 @media #{$medium-and-down} {
   .info {
-    padding: 0 5px;
+    padding: 0 0.75rem;
     &__subtitle:hover {
       white-space: normal;
     }

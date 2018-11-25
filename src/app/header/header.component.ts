@@ -1,5 +1,4 @@
-import {AfterViewInit, Component, ElementRef, HostListener, Inject, OnInit, ViewChild} from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MaterialService} from '../shared/classes/material.service';
 import {HeaderAuthService} from '../shared/services/header-auth.service';
 
@@ -16,8 +15,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild('sidenav') sidenavRef: ElementRef;
   public user = [];
 
-  constructor(@Inject(DOCUMENT) public document: Document,
-              private headerAuthService: HeaderAuthService) {
+  constructor(private headerAuthService: HeaderAuthService) {
   }
 
   ngOnInit() {
@@ -28,12 +26,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     MaterialService.initializeSidenav(this.sidenavRef);
-  }
-
-  @HostListener('window:scroll')
-  private listener(): void {
-    const scrollTop = this.document.documentElement.scrollTop;
-    this.isFixed = scrollTop > 0;
   }
 
 }

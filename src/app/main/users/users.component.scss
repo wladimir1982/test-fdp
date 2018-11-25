@@ -88,11 +88,6 @@
 
 //styles for media queries
 
-@media #{$large-and-up} {
-  .row .col {
-    padding: 0;
-  }
-}
 @media #{$medium-and-down} {
   .users {
     margin-bottom: -40px;

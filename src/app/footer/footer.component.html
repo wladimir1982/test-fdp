@@ -1,33 +1,35 @@
 <footer class="footer">
   <div class="container">
-    <div class="footer__nav">
-        <div class="footer__logo">
-          <a [ngx-scroll-to]="'header'">
-            <img src="../../assets/images/logo/footer-logo.svg" alt="logo">
-          </a>
-        </div>
-        <ul class="footer__menu">
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" [ngx-scroll-to]="'about'">About me</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" [ngx-scroll-to]="'acq'">Relationships</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" [ngx-scroll-to]="'requirements'">Requirements</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" [ngx-scroll-to]="'users'">Users</a>
-          </li>
-          <li class="footer__menu-item">
-            <a class="footer__menu-link" [ngx-scroll-to]="'sign'">Sign Up</a>
-          </li>
-        </ul>
+    <div class="row">
+      <div class="footer__nav col l12 m12 s12">
+          <div class="footer__logo">
+            <a [ngx-scroll-to]="'header'">
+              <img src="../../assets/images/logo/footer-logo.svg" alt="logo">
+            </a>
+          </div>
+          <ul class="footer__menu">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" [ngx-scroll-to]="'about'">About me</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" [ngx-scroll-to]="'acq'">Relationships</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" [ngx-scroll-to]="'requirements'">Requirements</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" [ngx-scroll-to]="'users'">Users</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" [ngx-scroll-to]="'sign'">Sign Up</a>
+            </li>
+          </ul>
+      </div>
     </div>
   </div>
   <hr>
-  <div class="row">
-    <div class="container">
+  <div class="container">
+    <div class="row">
       <div class="footer__content">
         <div class="footer__contacts col l5 m5">
           <ul class="footer__img hide-on-small-and-down">
@@ -108,7 +110,9 @@
           </ul>
         </div>
       </div>
-      <div class="footer__social">
+    </div>
+    <div class="row">
+      <div class="footer__social col l12 m12 s12">
         <div class="footer__social-copy">© abz.agency specially for the test task</div>
         <ul>
           <li class="footer__social-item">

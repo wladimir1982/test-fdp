@@ -13,7 +13,6 @@
     @include styles-for-content-overflow;
   }
   &__description {
-    padding-right: 8px;
     color: $users-want-color;
     font-family: $second-font-family;
     font-size: 16px;
@@ -28,6 +27,11 @@
 //styles for media queries
 
 @media #{$large-and-up} {
+  .info {
+    &__description {
+      padding-right: 8px;
+    }
+  }
   .row .col {
       padding: 0;
   }
@@ -36,14 +40,29 @@
   }
 }
 
-@media #{$medium-and-down} {
-  img {
-    width: 100%;
+@media #{$extra-large-and-up} {
+  .info {
+    &__description {
+      padding-right: 0;
+    }
   }
+  .row .col {
+    padding: 0 0.75rem;
+  }
+  img {
+    padding-top: 0;
+  }
+}
+
+@media #{$medium-and-down} {
   .info {
     &__title {
       white-space: normal;
     }
+  }
+  img {
+    width: 100%;
+    padding-top: 0;
   }
 }
 

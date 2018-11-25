@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 30px 0;
+    padding: 30px 0 10px !important;
   }
   &__logo {
     width: 134px;
@@ -36,12 +36,13 @@
     background-color: $hr-color;
   }
   &__content {
-    margin-bottom: 22px;
+    margin-bottom: 2px;
     @include styles-for-footer-df;
   }
   &__contacts {
     display: flex;
     flex-direction: row;
+    margin-left: 0 !important;
   }
   &__contacts:first-child a {
     color: $white-color;
@@ -102,13 +103,25 @@
   }
 }
 
+@media #{$extra-large-and-up} {
+  .row .col {
+    padding: 0 0.75rem;
+  }
+}
+
 @media #{$medium-and-down} {
   .footer {
+    &__nav {
+      padding: 30px 0.75rem 10px !important;
+    }
+    &__contacts {
+      margin-left: 0 !important;
+    }
     &__contacts-item {
       font-size: 18px;
     }
     &__menu {
-      flex-basis: 70%;
+      flex-basis: 72%;
     }
     &__menu-item:not(:last-child) {
       margin-right: 3%;

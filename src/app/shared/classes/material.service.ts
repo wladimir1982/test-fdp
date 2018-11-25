@@ -11,7 +11,9 @@ export interface MaterialInstance {
 export class MaterialService {
 
   static initializeSidenav(ref: ElementRef) {
-    M.Sidenav.init(ref.nativeElement);
+    M.Sidenav.init(ref.nativeElement, {
+      preventScrolling: false,
+    });
   }
 
   static initModal(ref: ElementRef) {

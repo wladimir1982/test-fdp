@@ -13,7 +13,6 @@
     overflow: hidden;
     text-overflow: ellipsis; }
   .info__description {
-    padding-right: 8px;
     color: #fefefe;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 16px;
@@ -23,17 +22,30 @@
     justify-content: flex-end; }
 
 @media only screen and (min-width: 993px) {
+  .info__description {
+    padding-right: 8px; }
+
   .row .col {
     padding: 0; }
 
   img {
     padding-top: 14px; } }
-@media only screen and (max-width: 992px) {
-  img {
-    width: 100%; }
+@media only screen and (min-width: 1201px) {
+  .info__description {
+    padding-right: 0; }
 
+  .row .col {
+    padding: 0 0.75rem; }
+
+  img {
+    padding-top: 0; } }
+@media only screen and (max-width: 992px) {
   .info__title {
-    white-space: normal; } }
+    white-space: normal; }
+
+  img {
+    width: 100%;
+    padding-top: 0; } }
 @media only screen and (max-width: 600px) {
   .info {
     padding: 70px 0 70px; }

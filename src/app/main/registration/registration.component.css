@@ -6,23 +6,21 @@
   text-align: center; }
 
 .subtitle {
-  margin-bottom: 49px;
+  margin-bottom: 52px;
   text-align: center;
   color: #010000;
   font-family: "Source Sans Pro", sans-serif; }
 
 .form {
-  margin-bottom: 118px; }
+  margin-bottom: 119px; }
   .form__reg {
     display: flex;
     flex-direction: row;
-    margin-bottom: 3px; }
-  .form__reg > .input-field:not(:last-child) {
-    margin-right: 30px; }
+    margin-bottom: -17px; }
   .form__choice {
     display: flex;
     flex-direction: row;
-    margin-bottom: 24px; }
+    margin-bottom: 4px; }
   .form .file-field[_ngcontent-c8] .file-path-wrapper[_ngcontent-c8] span[_ngcontent-c8] {
     padding-left: 0; }
 
@@ -85,7 +83,7 @@ input.invalid[type=text]:not(.browser-default) {
 .my-btn {
   position: absolute;
   right: 0;
-  height: 56px;
+  height: 54px;
   padding: 0 6.5%;
   border-radius: 0 4px 4px 0;
   border: 2px solid #ef6c00;
@@ -131,15 +129,44 @@ div#default.container {
   .row .col {
     padding: 0; }
 
+  .form__reg > .input-field:not(:last-child) {
+    margin-right: 30px; }
+
   input[type=text]:not(.browser-default) {
     width: 94%; }
 
   select {
     width: 97%; } }
+@media only screen and (min-width: 1201px) {
+  .row .col {
+    padding: 0 0.75rem; }
+
+  .form__reg > .input-field:not(:last-child) {
+    margin-right: 0; }
+
+  .file-field .file-path-wrapper {
+    padding-left: 0; }
+
+  input[type=text]:not(.browser-default) {
+    width: 100%;
+    box-sizing: border-box; }
+
+  select {
+    width: 100%;
+    box-sizing: border-box; }
+
+  .my-btn {
+    right: 10px; } }
 @media only screen and (max-width: 992px) {
-  .form input[type=text]:not(.browser-default) {
-    width: 96%;
-    margin: 0; } }
+  .file-field .file-path-wrapper {
+    padding-left: 0; }
+
+  input[type=text]:not(.browser-default) {
+    box-sizing: border-box;
+    margin: 0; }
+
+  .my-btn {
+    right: 10px; } }
 @media only screen and (max-width: 600px) {
   .subtitle {
     margin-bottom: 20px; }
@@ -155,9 +182,6 @@ div#default.container {
       display: flex;
       flex-direction: column; }
     .form .file-field .file-path-wrapper {
-      padding-left: 0; }
-
-  .my-btn {
-    right: 10px; } }
+      padding-left: 0; } }
 
 /*# sourceMappingURL=registration.component.css.map */

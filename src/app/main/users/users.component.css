@@ -83,9 +83,6 @@
 .wrap-btn {
   margin-bottom: 81px; }
 
-@media only screen and (min-width: 993px) {
-  .row .col {
-    padding: 0; } }
 @media only screen and (max-width: 992px) {
   .users {
     margin-bottom: -40px; }

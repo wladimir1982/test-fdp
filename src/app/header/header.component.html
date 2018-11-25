@@ -1,5 +1,5 @@
 <header id="header" class="header">
-  <div class="wrap" [class.fixed]="isFixed">
+  <div class="wrap">
     <div class="container">
       <div class="header__nav-wrapper">
         <div class="header__logo">
@@ -38,40 +38,6 @@
           </a>
         </div>
         <!--            Header menu - Finish-->
-        <!--            Header sidenav - Begin-->
-        <ul id="slide-out" class="sidenav" #sidenav>
-          <ul class="user">
-            <li class="user__photo">
-              <img src="{{user[6]}}" alt="user">
-            </li>
-            <li class="user__name">{{user[1]}}</li>
-            <li class="user__email">
-              <a href="mailto:work.of.{{user[2]}}">{{user[2]}}</a>
-            </li>
-          </ul>
-            <div class="divider"></div>
-          <ul class="user__menu">
-            <li class="user__menu-item">
-              <a class="user__menu-link" [ngx-scroll-to]="'about'">About me</a>
-            </li>
-            <li class="user__menu-item">
-              <a class="user__menu-link" [ngx-scroll-to]="'acq'">Relationships</a>
-            </li>
-            <li class="user__menu-item">
-              <a class="user__menu-link" [ngx-scroll-to]="'requirements'">Requirements</a>
-            </li>
-            <li class="user__menu-item">
-              <a class="user__menu-link" [ngx-scroll-to]="'users'">Users</a>
-            </li>
-            <li class="user__menu-item">
-              <a class="user__menu-link" [ngx-scroll-to]="'sign'">Sign Up</a>
-            </li>
-            <li class="user__menu-item">
-              <a href="#" class="user__menu-link">Sign Out</a>
-            </li>
-          </ul>
-        </ul>
-        <!--            Header sidenav - Finish-->
         <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-large-only">
           <img src="../../assets/images/icons/line-menu.svg" alt="menu">
         </a>
@@ -91,4 +57,38 @@
       </div>
     </div>
   </div>
+  <!--            Header sidenav - Begin-->
+  <ul id="slide-out" class="sidenav" #sidenav>
+    <ul class="user">
+      <li class="user__photo">
+        <img src="{{user[6]}}" alt="user">
+      </li>
+      <li class="user__name">{{user[1]}}</li>
+      <li class="user__email">
+        <a href="mailto:work.of.{{user[2]}}">{{user[2]}}</a>
+      </li>
+    </ul>
+      <div class="divider"></div>
+    <ul class="user__menu">
+      <li class="user__menu-item">
+        <a class="user__menu-link" [ngx-scroll-to]="'about'">About me</a>
+      </li>
+      <li class="user__menu-item">
+        <a class="user__menu-link" [ngx-scroll-to]="'acq'">Relationships</a>
+      </li>
+      <li class="user__menu-item">
+        <a class="user__menu-link" [ngx-scroll-to]="'requirements'">Requirements</a>
+      </li>
+      <li class="user__menu-item">
+        <a class="user__menu-link" [ngx-scroll-to]="'users'">Users</a>
+      </li>
+      <li class="user__menu-item">
+        <a class="user__menu-link" [ngx-scroll-to]="'sign'">Sign Up</a>
+      </li>
+      <li class="user__menu-item">
+        <a href="#" class="user__menu-link">Sign Out</a>
+      </li>
+    </ul>
+  </ul>
+  <!--            Header sidenav - Finish-->
 </header>
